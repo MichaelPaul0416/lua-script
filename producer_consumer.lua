@@ -4,6 +4,8 @@
 local producer
 
 local number=0
+
+-- producer
 function produce()
 	while true and number<=10 do
 		print('send:'..tostring(number))
@@ -12,6 +14,7 @@ function produce()
 end
 
 
+-- consumer
 function consume()
 	while true and number < 10 do
 		status,value=coroutine.resume(producer)
