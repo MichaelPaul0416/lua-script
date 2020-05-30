@@ -31,7 +31,6 @@ wrapper=coroutine.wrap(
 		return a+b
 	end
 )
-
 print(wrapper(1,2))
 
 tool.newLineWithTip('print table')
@@ -94,6 +93,7 @@ co2=coroutine.create(
 		return 1
 	end
 )
+
 -- n负责接收co2中函数的返回
 -- 同时3作为参数传给coroutine
 b,n=coroutine.resume(co2,3)
